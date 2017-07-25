@@ -10,3 +10,7 @@ RUN yes | apt-get update \
     && npm install --global gulp
 
 RUN apt-get install -y openjdk-8-jdk
+
+RUN wget https://sonarsource.bintray.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.0.1.733-linux.zip \
+    && unzip sonar-scanner-cli-3.0.1.733-linux.zip \
+    && mv sonar-scanner-3.0.1.733-linux/ /opt
